@@ -6,7 +6,7 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("QML Syntax Demo")
+    title: qsTr("Hallo Welt! QML Synthax Demo")
 
     property string name: "Hallo Quick and QML"
 
