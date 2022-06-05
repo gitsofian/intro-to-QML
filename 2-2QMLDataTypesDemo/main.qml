@@ -26,6 +26,9 @@ Window {
     property var anArray: [1, 2, 3, "four", "five", (function(){return "six";})]
     property var anObject: {"foo": 10, "bar":20}
     property var aFunction: (function(){return "one";})
+    property var bFunction: ((value)=>{ return value+" two ";})
+
+    property var aFont: Qt.font({family: "Consolas", pointSize: 30, bold:true})
 
 
 
@@ -40,7 +43,8 @@ Window {
             id: mTextId
             anchors.centerIn: parent
             text: mString
-            font.bold: isFemale?false:true
+            // font.bold: isFemale?false:true
+            font: aFont
         }
     }
 
@@ -101,8 +105,20 @@ Window {
                             }
                         })
 
+        for(var i=0; i < anArray.length; i++ )
+        {
+            if(i===5)
+            {
+                console.log(anArray[i]())
+            }
+            else
+            {
+                console.log(anArray[i])
+            }
+        }
 
-
+        console.log("Calling the aFunction :" +aFunction())
+        console.log("calling the bFunction ;" +bFunction(48))
 
     }
 }
