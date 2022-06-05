@@ -4,11 +4,11 @@ import QtQuick.Window 2.14
 Window {
     id: rootId
     visible: true
-    width: 640
+    width: 800
     height: 480
     title: qsTr("Hello World, Hallo Welt! QML Synthax Demo")
 
-    property string name: "Hallo Quick and QML"
+    property string name: "Help"
 
     Row {
         id: row1
@@ -20,6 +20,13 @@ Window {
             width: 150; height: 150;
             color: "red"
             radius: 20
+            Text {
+                id: textId0
+                anchors.centerIn: parent
+                text: qsTr("Home")
+                color: "white"
+                font.pointSize: 16
+            }
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -33,6 +40,13 @@ Window {
             width: 150; height: 150;
             color: "green"
             radius: 20
+            Text {
+                id: textId1
+                anchors.centerIn: parent
+                text: qsTr("Start")
+                color: "white"
+                font.pointSize: 16
+            }
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -46,6 +60,13 @@ Window {
             width: 150; height: 150;
             color: "blue"
             radius: 20
+            Text {
+                id: textId2
+                anchors.centerIn: parent
+                text: qsTr("Stop")
+                color: "white"
+                font.pointSize: 16
+            }
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
@@ -64,7 +85,7 @@ Window {
                 anchors.centerIn: parent
                 text: name
                 color: "white"
-                font.pointSize: 10
+                font.pointSize: 20
             }
             MouseArea {
                 anchors.fill: parent

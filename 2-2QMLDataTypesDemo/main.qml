@@ -18,7 +18,7 @@ Window {
     property var aBool: false
     property var aString: "Hallo Welt!"
     property var anotherString: String("#FF008800")
-    property var aColor: Qt.rgba(0.2,0.3,0.4,0.5)
+    property var aColor: Qt.rgba(0.2, 0.3, 0.4, 0.1)
     property var aRect: Qt.rect(10, 10, 10, 10)
     property var aPoint: Qt.point(10, 10)
     property var aSize: Qt.size(10, 10)
@@ -34,7 +34,7 @@ Window {
         height: 100 + mInt
 
         anchors.centerIn: parent
-        color: "yellow"
+        color: aColor
 
         Text {
             id: mTextId
@@ -79,6 +79,28 @@ Window {
 
         // playing with var datatypes
         console.log("-------------------------Playing with var Datatypes----------------------------")
+        console.log("The value of aNumber is: "+ aNumber)
+        console.log("The value of aBool is: "+ aBool)
+        console.log("The value of aString is: "+ aString)
+        console.log("The value of anotherString is: "+ anotherString)
+
+        console.log("The component of the aRect are : x:"+ aRect.x
+                                                  + " y:" + aRect.y
+                                                  + " width:" + aRect.width
+                                                  + " height:" + aRect.height)
+
+        console.log("The length of the array "+ anArray.length)
+
+        anArray.forEach((value, index)=>{
+                            if (index === 5)
+                            {
+                                console.log(value(), index)
+                            }else
+                            {
+                                console.log(value, index)
+                            }
+                        })
+
 
 
 

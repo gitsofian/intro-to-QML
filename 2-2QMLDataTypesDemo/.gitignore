@@ -20,7 +20,7 @@
 core
 !core/
 tags
-.DS_Store
+*.DS_Store
 .directory
 *.debug
 Makefile*
@@ -70,4 +70,3 @@ Thumbs.db
 # --------
 *.dll
 *.exe
-
